@@ -132,12 +132,12 @@ func (w *Worktree) PullContext(ctx context.Context, o *PullOptions) error {
 		return err
 	}
 
-	if err := w.Reset(&ResetOptions{
-		Mode:   MergeReset,
-		Commit: ref.Hash(),
-	}); err != nil {
-		return err
-	}
+//	if err := w.Reset(&ResetOptions{
+//		Mode:   MergeReset,
+//		Commit: ref.Hash(),
+//	}); err != nil {
+//		return err
+//	}
 
 	if o.RecurseSubmodules != NoRecurseSubmodules {
 		return w.updateSubmodules(ctx, &SubmoduleUpdateOptions{
